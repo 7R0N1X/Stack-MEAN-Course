@@ -6,8 +6,10 @@ employeeCtrl.getEmployees = async (req, res) => {
     res.json(employees)
 }
 
-employeeCtrl.createEmployee = (req, res) => {
-    res.send('Create employee');
+employeeCtrl.createEmployee = async (req, res) => {
+    const newEmployee = new employee(req.body);
+    await newEmployee.save()
+    res.send({message: 'Employee created'});
 }
 
 employeeCtrl.getEmployee = (req, res) => {
