@@ -12,8 +12,10 @@ employeeCtrl.createEmployee = async (req, res) => {
     res.send({message: 'Employee created'});
 }
 
-employeeCtrl.getEmployee = (req, res) => {
-    res.send('Get employee');
+employeeCtrl.getEmployee = async (req, res) => {
+    console.log(req.params);
+    const _employee = await employee.findById(req.params.id);
+    res.send(_employee);
 }
 
 employeeCtrl.editEmployee = (req, res) => {

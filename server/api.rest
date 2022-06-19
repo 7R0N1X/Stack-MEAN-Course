@@ -11,3 +11,6 @@ Content-Type: application/json
     "office": "Rome",
     "salary": "23000"
 }
+
+###
+GET http://localhost:4000/employess/62af3e61dcca45880c05a51e
