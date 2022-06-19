@@ -13,4 +13,15 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:4000/employess/62af3e61dcca45880c05a51e
+GET http://localhost:4000/employess/62af3e1ddcca45880c05a51b
+
+###
+DELETE http://localhost:4000/employess/62af469a411ab37da2a41594
+
+###
+PUT http://localhost:4000/employess/62af3e1ddcca45880c05a51b
+Content-Type: application/json
+
+{
+    "salary": 90000
+}
